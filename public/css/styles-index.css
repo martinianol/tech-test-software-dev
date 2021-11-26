@@ -163,7 +163,15 @@ select:-webkit-autofill:focus {
 
     .search-form {
       position: relative;
-      top: -20vh;
+      top: -30vh;
     }
+
+    main {
+      overflow: hidden;
+    }
+
+    html::-webkit-scrollbar {
+      display: none;
+  }
   
 }

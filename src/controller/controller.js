@@ -8,7 +8,6 @@ const controller = {
 
   search: async (req, res) => {
     let userToFind = req.query.keyword;
-    console.log(userToFind);
     let url = 'https://bio.torre.co/api/bios/';
 
     const response = await fetch(`${url}${userToFind}`);
@@ -20,8 +19,6 @@ const controller = {
       let notFound = user
       return res.render('index.ejs', { notFound, userToFind });
     }
-
-    const strengths = user.strengths;
 
     res.render('profile.ejs', { user })
   },

@@ -8,14 +8,14 @@
   <body>
     <%- include('./partials/header.ejs')%>
     <main>
-      <div class='back-button'>
-        <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
-      </div>
-
+      
       <h1><%=locals.strength.name%></h1>
       <section class="strength-info">
-          <p>Proficiency: <strong><%= locals.strength.proficiency%></strong></p>
-          <p>Recomendations: <strong><%= locals.strength.recommendations%></strong></p>
+        <p>Proficiency: <strong><%= locals.strength.proficiency%></strong></p>
+        <p>Recomendations: <strong><%= locals.strength.recommendations%></strong></p>
+        <div class='back-button'>
+          <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
+        </div>
       </section>
 
       <section class="experiences">
