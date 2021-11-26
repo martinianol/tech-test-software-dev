@@ -166,12 +166,7 @@ select:-webkit-autofill:focus {
       top: -30vh;
     }
 
-    main {
-      overflow: hidden;
-    }
-
-    html::-webkit-scrollbar {
-      display: none;
-  }
+  
+  
   
 }
