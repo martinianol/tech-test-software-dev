@@ -1,0 +1,61 @@
+main {
+  padding: 5% 10%;
+}
+.info {
+  display: flex;
+  gap: 10%
+}
+
+.info img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.info .info-title {
+  text-align: left;
+}
+.info .info-title h2 {
+  font-size: 1.5rem;
+}
+.info .info-title h4 {
+  color: hsla(0,0%,100%,.5)
+}
+
+
+.bio {
+  margin-top: 2rem;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.bio p {
+  margin: 0;
+}
+
+.skills {
+  margin-top: 2rem;
+  background-color: #383b40;
+  padding: 10px;
+  border-radius: 15px;
+
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  
+}
+
+.skills-container p {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+ 
+}
+
+@media (min-width: 600px) {
+  .skills-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        text-align: left;
+  }
+}

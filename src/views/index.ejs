@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('./partials/head.ejs')%>
+  <body>
+    <%- include('./partials/header.ejs')%>
 
-  <%- include('./partials/header.ejs')%>
-
-  <main>
-    <section class="title">
-      <h1>Welcome!</h1>
-      <h2>Here you can find other Torre users</h2>
-    </section>
+    <main>
+      <section class="title">
+        <h1>Welcome!</h1>
+        <h2>Here you can find other Torre users</h2>
+      </section>
     
-    <section class="search-form">
-      <form action="/search/" method="get">
-        <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
-        <span class="not-found"><%= locals.notFound ? `We couldn't find a user with that name`: '' %></span>
-        <button type="submit">SEARCH USER</button>
-      </form>
-    </section>
-  </main>
-
+      <section class="search-form">
+        <form action="/search/" method="get">
+          <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
+          <p class="not-found"><%= locals.notFound ? `We couldn't find a user with that name`: '' %></p>
+          <button type="submit">SEARCH USER</button>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>

@@ -78,9 +78,8 @@ form {
 
 .not-found {
   color: red;
-  position: absolute;
   font-size: 1.4rem;
-  top: 12%
+ 
 }
 
 form button {

@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('./partials/head.ejs')%>
+  <head>
+    <link rel="stylesheet" href="/css/styles-profile.css" />
+  </head>
 
-  <%- include('./partials/header.ejs')%>
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      <section class="info">
+        <img src="<%=locals.user.person.picture%>" alt="user profile picture"/>
+        <div class="info-title">
+          <h2><%= locals.user.person.name%></h2>
+          <h3><%=locals.user.person.professionalHeadline%></h3>
+          <h4><%=locals.user.person.location.shortName%></h4>
+        </div>
+      </section>
 
-  <h1>Hello World!</h1>
-  <p>Hello <%= locals.user.person.name%></p>
-  <p>You are a <%=locals.user.person.professionalHeadline%></p>
-  <h2>Your skills are</h2>
-  <% locals.user.strengths.forEach(strength => { %>
-    <p><%=strength.name%></p>
-  <%})%>
+      <section class="bio">
+        <p><%=locals.user.person.summaryOfBio%></p>
+      </section>
+
+      <section class="skills">
+        <h2>Your skills are</h2>
+        <div class="skills-container">
+          <% locals.user.strengths.forEach(strength => { %>
+            <p><%=strength.name%></p>
+            <%})%>
+        </div>
+      </section>
+    </main>
+   
+    
+    
+  </body>
 </html>
