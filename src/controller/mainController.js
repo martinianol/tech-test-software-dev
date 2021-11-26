@@ -1,13 +1,13 @@
-
+const fetch = require('node-fetch');
 
 const controller = {
 
-  home: (req, res) => {
+  home: async (req, res) => {
 
-
-    res.render('index.ejs') // Render HTML with info paso al html el array
-
-
+    let url = 'https://bio.torre.co/api/bios/marsleguizamon'
+    const response = await fetch(`${url}`);
+    const user = await response.json();
+    res.render('index.ejs', { user })
   }
 }
 
