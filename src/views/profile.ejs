@@ -1,24 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/641c03bd1a.js"
-      crossorigin="anonymous"
-    ></script>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
+  <%- include('./partials/header.ejs')%>
 
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/styles-index.css" />
-    <link rel="stylesheet" href="/css/styles-menu-responsive.css" />
-  </head>
   <h1>Hello World!</h1>
   <p>Hello <%= locals.user.person.name%></p>
   <p>You are a <%=locals.user.person.professionalHeadline%></p>

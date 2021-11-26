@@ -1,48 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/641c03bd1a.js"
-      crossorigin="anonymous"
-    ></script>
+  <%- include('./partials/head.ejs')%>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="icon" href="/img/torre favicon.png">
-
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/styles-index.css" />
-    <link rel="stylesheet" href="/css/styles-menu-responsive.css" />
-  </head>
-
-  <header>
-    <nav>
-      <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
-      <a href="/"><img class="logo" src="/img/torre_name_edited.png" alt="torre logo" /></a>
-      <a href=""><i class="fas fa-search"></i></a>
-    </nav>
-  </header>
+  <%- include('./partials/header.ejs')%>
 
   <main>
-    
-    <div class="title">
+    <section class="title">
       <h1>Welcome!</h1>
       <h2>Here you can find other Torre users</h2>
-    </div>
-  
-    <form action="/search/" method="get">
-      <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
-      <span class="not-found"><%= locals.notFound ? 'No results': '' %></span>
-      <button type="submit">SEARCH USER</button>
-    </form>
-
+    </section>
+    
+    <section class="search-form">
+      <form action="/search/" method="get">
+        <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
+        <span class="not-found"><%= locals.notFound ? 'No results': '' %></span>
+        <button type="submit">SEARCH USER</button>
+      </form>
+    </section>
   </main>
 
 </html>
