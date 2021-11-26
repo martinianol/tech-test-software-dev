@@ -44,7 +44,6 @@ const controller = {
 
     const strength = strengths.find(strength => strength.id === strengthId);
 
-
     res.render('skill.ejs', { user, strength })
   }
 }
