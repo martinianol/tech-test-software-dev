@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <%- include('./partials/head.ejs')%>
 
   <%- include('./partials/header.ejs')%>
@@ -13,7 +13,7 @@
     <section class="search-form">
       <form action="/search/" method="get">
         <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
-        <span class="not-found"><%= locals.notFound ? 'No results': '' %></span>
+        <span class="not-found"><%= locals.notFound ? `We couldn't find a user with that name`: '' %></span>
         <button type="submit">SEARCH USER</button>
       </form>
     </section>
