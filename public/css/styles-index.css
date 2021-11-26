@@ -51,6 +51,17 @@ a {
   width: 100%
 }
 
+.title {
+  height: 50vh;
+  background-image: url('https://res.cloudinary.com/torre-technologies-co/image/upload/f_auto,q_auto/v1617734713/origin/explorer/ftswyh7z7twblwhruyku.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
 .title h1 {
   font-size: 2.125rem;
   font-weight: 400;
