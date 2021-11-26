@@ -7,6 +7,7 @@ const mainController = require('../controller/mainController')
 
 //Assign each route to controller
 router.get('/', mainController.home)
+router.get('/search', mainController.search)
 
 
 module.exports = router

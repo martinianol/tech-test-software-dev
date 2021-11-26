@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 html {
   font-family: 'Mulish', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #565b64;
+}
+
+p {
+  color:  hsla(0,0%,100%,.9);
 }

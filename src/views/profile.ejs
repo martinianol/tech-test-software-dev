@@ -19,12 +19,11 @@
     <link rel="stylesheet" href="/css/styles-index.css" />
     <link rel="stylesheet" href="/css/styles-menu-responsive.css" />
   </head>
-  <h1>Hola!</h1>
-  <h2>Torre means Tower!</h2>
-  <form action="/search/" method="get">
-    <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
-    <span class="not-found"><%= locals.notFound ? 'No results': '' %></span>
-    <button type="submit">Search</button>
-  </form>
-
+  <h1>Hello World!</h1>
+  <p>Hello <%= locals.user.person.name%></p>
+  <p>You are a <%=locals.user.person.professionalHeadline%></p>
+  <h2>Your skills are</h2>
+  <% locals.user.strengths.forEach(strength => { %>
+    <p><%=strength.name%></p>
+  <%})%>
 </html>
