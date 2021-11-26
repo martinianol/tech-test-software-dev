@@ -156,5 +156,14 @@ select:-webkit-autofill:focus {
       font-size: 3rem;
       line-height: 4rem;
     }
+
+    .title {
+      justify-content: center;
+    }
+
+    .search-form {
+      position: relative;
+      top: -20vh;
+    }
   
 }
