@@ -9,6 +9,7 @@ main {
 .info img {
   width: 30%;
   border-radius: 50%;
+  max-width: 150px;;
 }
 
 .info .info-title {
@@ -34,7 +35,7 @@ main {
 }
 
 .skills {
-  margin-top: 2rem;
+  margin-top: 3rem;
   background-color: #383b40;
   padding: 10px;
   border-radius: 15px;
@@ -50,12 +51,47 @@ main {
 .skills-container p {
   font-size: 1.2rem;
   line-height: 1.4rem;
- 
 }
-
+.skills-container p:hover {
+  color:#cddc39;
+  cursor: pointer;
+}
 @media (min-width: 600px) {
+
+  .bio {
+    font-size: 1.4rem;
+  line-height: 1.8rem;
+  }
+  .info .info-title h2 {
+    font-size: 2.4rem;
+  }
+  .info .info-title h3 {
+    font-size: 1.8rem;
+  }
+  .info .info-title h4 {
+    font-size: 1.4rem;
+  }
+
+  .skills {
+    padding: 20px;
+  }
+
+  .skills h2 {
+    font-size: 1.8rem;
+  }
+
   .skills-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         text-align: left;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    padding: 5% 15%;
+  }
+
+  .skills-container p {
+    font-size: 1.6rem;
   }
 }
