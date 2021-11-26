@@ -3,7 +3,9 @@ main {
 }
 .info {
   display: flex;
-  gap: 10%
+  flex-direction: column;
+  gap: 10%;
+  align-items: center;
 }
 
 .info img {
@@ -12,9 +14,7 @@ main {
   max-width: 150px;;
 }
 
-.info .info-title {
-  text-align: left;
-}
+
 .info .info-title h2 {
   font-size: 1.5rem;
 }
@@ -57,6 +57,14 @@ main {
   cursor: pointer;
 }
 @media (min-width: 600px) {
+  .info {
+    flex-direction: row;
+    gap: 10%
+  }
+
+  .info .info-title {
+    text-align: left;
+  }
 
   .bio {
     font-size: 1.4rem;
@@ -90,8 +98,17 @@ main {
   main {
     padding: 5% 15%;
   }
+  .bio p {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+
+  }
 
   .skills-container p {
     font-size: 1.6rem;
   }
+  .skills h2 {
+    font-size: 2.4rem;
+}
 }
