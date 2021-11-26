@@ -52,7 +52,7 @@ a {
 }
 
 .title {
-  height: 50vh;
+  height: 50vw;
   background-image: url('https://res.cloudinary.com/torre-technologies-co/image/upload/f_auto,q_auto/v1617734713/origin/explorer/ftswyh7z7twblwhruyku.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -67,6 +67,64 @@ a {
   font-weight: 400;
   line-height: 2.6875rem;
 }
-p {
-  color:  hsla(0,0%,100%,.9);
+
+form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+form button {
+  border: 1px solid #27292d;
+  box-shadow: 1px 1px 6px rgb(1 1 1 / 40%);
+  background-color: #cddc39;
+  color: rgba(0,0,0,.87);
+  min-height: 4rem;
+  width: 75%;
+  padding: 1rem 2.4rem;
+  border-radius: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  margin-top: 1rem;;
+  transition: all 0.5s;
+}
+
+form input {
+  border: solid 1px hsla(0,0%,100%, 0.65);
+  background-color: transparent;
+  color: hsla(0,0%,100%,.9);
+  min-height: 4rem;
+  width: 75%;
+  padding: 1rem 2.4rem;
+  border-radius: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 1rem;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: #ecfa6f;
+}
+form input::placeholder {
+  font-size: 1.4rem;
+  line-height: 1rem;
+  
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+  -webkit-text-fill-color: hsla(0,0%,100%,.9);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
