@@ -30,6 +30,11 @@ app.listen(port, () =>
   console.log('Server up and running at ' + port + '\n' + 'Torre is the best place to work!!!')
 )
 
+
+//Setting Routes
+const mainRoutes = require('./routes/mainRoutes')
+app.use('/', mainRoutes)
+
 app.use('/', (req, res, next) => res.render('index.ejs'))
 // Rooute 404
 app.use((req, res, next) => {
