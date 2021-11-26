@@ -3,7 +3,7 @@ const cors = require('cors')
 const methodOverride = require('method-override')
 const path = require('path')
 
-const mainRoutes = require('./routes/mainRoutes')
+const routes = require('./routes/routes')
 
 
 /**
@@ -35,7 +35,7 @@ app.use(express.static(publicPath))
  * Routes
  */
 
-app.use('/', mainRoutes)
+app.use('/', routes)
 /* app.use((req, res, next) => {
   res.status(404).render('404.ejs')
 }) */

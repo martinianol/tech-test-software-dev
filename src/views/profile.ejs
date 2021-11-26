@@ -25,7 +25,9 @@
         <h2>Your skills are</h2>
         <div class="skills-container">
           <% locals.user.strengths.forEach(strength => { %>
-            <p><%=strength.name%></p>
+            <a href="/users/<%= locals.user.person.publicId %>/strengths/<%=strength.id%>">
+              <p><%=strength.name%></p>
+            </a>
             <%})%>
         </div>
       </section>

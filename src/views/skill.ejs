@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
+  <head>
+    <link rel="stylesheet" href="/css/styles-skill.css" />
+  </head>
+
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+
+      <h1><%=locals.strength.name%></h1>
+      <section class="info">
+          <p>Proficiency: <%= locals.strength.proficiency%></p>
+          <p>Recomendations: <%= locals.strength.recommendations%></p>
+      </section>
+
+      <section class="bio">
+        <p><%=locals.user.person.name.split(" ")[0]%>'s related experiences</p>
+        <%locals.user.experiences.forEach(experience => { %>
+          <h2><%=experience.name%></h2>
+          <p><%=experience.organizations.name%>
+          <p>From <%=`${experience.fromMonth} ${experience.fromYear} to ${experience.toMonth} ${experience.toYear}`%></p>
+        <%})%>
+      </section>
+
+
+    </main>
+   
+    
+    
+  </body>
+</html>
