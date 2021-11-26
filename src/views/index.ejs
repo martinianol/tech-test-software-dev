@@ -15,16 +15,35 @@
       rel="stylesheet"
     />
 
+    <link rel="icon" href="/img/torre favicon.png">
+
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles-index.css" />
     <link rel="stylesheet" href="/css/styles-menu-responsive.css" />
   </head>
-  <h1>Hola!</h1>
-  <h2>Torre means Tower!</h2>
-  <form action="/search/" method="get">
-    <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
-    <span class="not-found"><%= locals.notFound ? 'No results': '' %></span>
-    <button type="submit">Search</button>
-  </form>
+
+  <header>
+    <nav>
+      <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+      <a href="/"><img class="logo" src="/img/torre_name_edited.png" alt="torre logo" /></a>
+      <a href=""><i class="fas fa-search"></i></a>
+    </nav>
+  </header>
+
+  <main>
+    <img class="cover-image" src="https://res.cloudinary.com/torre-technologies-co/image/upload/f_auto,q_auto/v1617734713/origin/explorer/ftswyh7z7twblwhruyku.jpg" />
+
+    <div class="title">
+      <h1>Welcome!</h1>
+      <h2>Here you can find other Torre users</h2>
+    </div>
+  
+    <form action="/search/" method="get">
+      <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Search Torre username..."%>"/>
+      <span class="not-found"><%= locals.notFound ? 'No results': '' %></span>
+      <button type="submit">Search</button>
+    </form>
+
+  </main>
 
 </html>
