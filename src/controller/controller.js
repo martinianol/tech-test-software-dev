@@ -8,6 +8,7 @@ const controller = {
 
   search: async (req, res) => {
     let userToFind = req.query.keyword;
+    console.log(userToFind);
     let url = 'https://bio.torre.co/api/bios/';
 
     const response = await fetch(`${url}${userToFind}`);
@@ -17,7 +18,7 @@ const controller = {
 
     if (user.code == errorCode) {
       let notFound = user
-      return res.render('index.ejs', { notFound });
+      return res.render('index.ejs', { notFound, userToFind });
     }
 
     const strengths = user.strengths;

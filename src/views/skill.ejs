@@ -20,14 +20,17 @@
 
       <section class="experiences">
         <h2><%=locals.user.person.name.split(" ")[0]%>'s experiences</h2>
+
         <%locals.user.experiences.forEach(experience => { %>
-          <h3><%=experience.name%></h3>
-          <p><%=experience.organizations[0].name%>
-          <p>From <%=`${experience.fromMonth} ${experience.fromYear}`%>
-            <% if(typeof experience.toMonth !=='undefined') {%>
-              <%=`to ${experience.toMonth} ${experience.toYear}`%>
-            <%}%>
-         </p>
+          <% if(experience.category === 'jobs') {%>
+              <h3><%=experience.name%></h3>
+              <p><%=experience.organizations[0].name%>
+              <p>From <%=`${experience.fromMonth} ${experience.fromYear}`%>
+                <% if(typeof experience.toMonth !=='undefined') {%>
+                  <%=`to ${experience.toMonth} ${experience.toYear}`%>
+                <%}%>
+              </p>          
+          <%}%>
         <%})%>
       </section>
 
