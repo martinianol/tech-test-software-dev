@@ -4,6 +4,7 @@ const methodOverride = require('method-override')
 const path = require('path')
 
 const routes = require('./routes/routes')
+const apiRoutes = require('./routes/APIroutes/routes');
 
 
 /**
@@ -36,6 +37,8 @@ app.use(express.static(publicPath))
  */
 
 app.use('/', routes)
+
+app.use('/api/', apiRoutes)
 /* app.use((req, res, next) => {
   res.status(404).render('404.ejs')
 }) */

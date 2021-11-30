@@ -5,6 +5,7 @@ const router = express.Router()
 //Require controller
 const controller = require('../controller/controller')
 
+
 //Assign each route to controller
 router.get('/', controller.home)
 router.get('/search', controller.search)
