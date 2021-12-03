@@ -15,7 +15,9 @@ const controller = {
 
   home: async (req, res) => {
     console.log('env ', url)
+    console.log('errorCode', errorCode)
     res.render('index.ejs')
+
   },
 
   search: async (req, res) => {
@@ -57,8 +59,6 @@ const controller = {
 
     const response = await fetch(`${url}${publicId}`);
     const user = await response.json();
-
-
 
     if (user.code == errorCode) {
       let notFound = user
