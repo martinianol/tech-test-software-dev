@@ -23,7 +23,8 @@
 
         <%locals.user.experiences.forEach(experience => { %>
           <% if(experience.category === 'jobs') {%>
-              <h3><%=experience.name%></h3>
+            <a href="/users/<%= locals.user.person.publicId %>/experiences/<%=experience.id%>"><h3><%=experience.name%></h3></a>
+              
               <p><%=experience.organizations[0].name%>
               <p>From <%=`${experience.fromMonth} ${experience.fromYear}`%>
                 <% if(typeof experience.toMonth !=='undefined') {%>

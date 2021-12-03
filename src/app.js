@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
 const methodOverride = require('method-override')
@@ -5,6 +7,7 @@ const path = require('path')
 
 const routes = require('./routes/routes')
 const apiRoutes = require('./routes/APIroutes/routes');
+
 
 
 /**

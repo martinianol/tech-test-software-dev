@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
+  <head>
+    <link rel="stylesheet" href="/css/styles-experience.css" />
+  </head>
+
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      
+      <h1><%=locals.experience.name%></h1>
+      <div class='back-button'>
+        <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
+      </div>
+
+      <section class="experiences">
+        <h2><%=locals.user.person.name.split(" ")[0]%>'s experience in <%=locals.experience.name%></h2>
+        <div class="company-info-container">
+          <% if(locals.experience.organizations[0].picture) {%>
+          <img src =<%=locals.experience.organizations[0].picture%>>
+          <%}%>
+          <div class="company-info">
+            <p><%=locals.experience.organizations[0].name%>
+              <p>From <%=`${locals.experience.fromMonth} ${locals.experience.fromYear}`%>
+                <% if(typeof experience.toMonth !=='undefined') {%>
+                  <%=`to ${locals.experience.toMonth} ${locals.experience.toYear}`%>
+                  <%}%>
+                </p>
+          </div>
+          
+        </div>
+
+        <%if (locals.experience.responsibilities.length !== 0) {%>
+          <h3>Main responsibilities</h3>
+          <p><%=locals.experience.responsibilities[0]%></p>          
+        <%}%>
+
+        <%if (locals.experience.additionalInfo) {%>
+          <h3>Additional Info</h3>
+          <p><%=locals.experience.additionalInfo%></p>          
+        <%}%>
+
+          
+      
+      </section>
+
+
+    </main>
+   
+    
+    
+  </body>
+</html>
