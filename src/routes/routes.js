@@ -18,7 +18,7 @@ router.get('/', controllerIndex.home)
 router.get('/yourJobs', controllerIndex.yourJobs)
 router.get('/findJobs', controllerIndex.findJobs)
 
-router.get('/search', controllerIndex.search)
+router.get('/search', controllerIndex.searchUser)
 router.get('/search/experiences', controllerIndex.searchExperiences)
 
 router.get('/users/:publicId/strengths/:strengthId', controllerSkill.skill)
