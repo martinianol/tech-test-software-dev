@@ -127,3 +127,10 @@ select:-webkit-autofill:focus {
     top: -30vh;
   }
 }
+
+@media (min-width: 2000px) {
+  .search-form {
+    position: relative;
+    top: -15vh;
+  }
+}

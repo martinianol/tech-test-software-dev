@@ -13,24 +13,26 @@
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 24px;
   text-decoration: none;
   font-size: 25px;
   color: rgba(255, 255, 255, 0.9);
   display: block;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .sidenav a:hover {
   background-color: #f1f1f1;
+  color: grey;
 }
 
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  text-align: center;
+  right: 0px;
   font-size: 36px;
-  margin-left: 50px;
 }
 
 header nav {

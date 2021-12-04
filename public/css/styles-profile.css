@@ -4,7 +4,7 @@ main {
 
 a {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 .info {
   display: flex;
@@ -16,15 +16,14 @@ a {
 .info img {
   width: 30%;
   border-radius: 50%;
-  max-width: 150px;;
+  max-width: 150px;
 }
-
 
 .info .info-title h2 {
   font-size: 1.5rem;
 }
 .info .info-title h4 {
-  color: hsla(0,0%,100%,.5)
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .links {
@@ -52,35 +51,33 @@ a {
   margin-top: 3rem;
 }
 
-.skills-container h3{
+.skills-container h3 {
   text-transform: capitalize;
-  color:#cddc39;
+  color: #cddc39;
   margin-top: 2rem;
 }
 
 .skills {
   background-color: #383b40;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-
 }
-
 
 .skills p {
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
 .skills p:hover {
-  color:#cddc39;
+  color: #cddc39;
   cursor: pointer;
 }
 @media (min-width: 600px) {
   .info {
     flex-direction: row;
-    gap: 10%
+    gap: 10%;
   }
 
   .info .info-title {
@@ -96,7 +93,7 @@ a {
 
   .bio {
     font-size: 1.4rem;
-  line-height: 1.8rem;
+    line-height: 1.8rem;
   }
   .info .info-title h2 {
     font-size: 2.4rem;
@@ -112,14 +109,13 @@ a {
     font-size: 1.8rem;
   }
   .skills-container h3 {
-    font-size: 1.6rem;   
+    font-size: 1.6rem;
     margin-top: 4rem;
-    
   }
 
   .skills {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        text-align: left;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: left;
   }
 }
 
@@ -131,7 +127,6 @@ a {
     margin: 0;
     font-size: 1.6rem;
     line-height: 2.2rem;
-
   }
 
   .skills p {
@@ -139,5 +134,5 @@ a {
   }
   .skills h2 {
     font-size: 2.4rem;
-}
+  }
 }
