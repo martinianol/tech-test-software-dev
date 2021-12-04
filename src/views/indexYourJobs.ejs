@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
+  <body>
+    <%- include('./partials/header.ejs')%>
+
+    <main>
+      <section class="title">
+        <h1>Hi!</h1>
+        <h2>Please enter your Torre's user name to display your jobs</h2>
+      </section>
+      <section class="search-form">
+        <form action="/search/experiences" method="get">
+          <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Torre's username..."%>"/>
+          <p class="not-found"><%= locals.notFound ? `We couldn't find a user named ${locals.userToFind}`: '' %></p>
+          <button type="submit">SEARCH YOUR JOBS</button>
+        </form>
+      </section>
+    
+    </main>
+  </body>
+</html>
