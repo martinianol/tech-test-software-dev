@@ -1,0 +1,84 @@
+body {
+  text-align: left;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+main {
+  padding: 5%;
+}
+
+main h1 {
+  font-size: 2.4rem;
+}
+
+.skill-title h1 {
+  color: #cddc39;
+  margin: 0;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.strength-info p {
+  margin-bottom: 20px;
+}
+.jobs {
+  margin-top: 20px;
+  color: #cddc39;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.jobs p {
+  margin: 0.2rem 0;
+  color: hsla(0, 0%, 100%, 0.9);
+}
+
+.strength-info p strong {
+  color: hsla(0, 0%, 100%, 0.9);
+}
+
+.back-button {
+  background-color: #cddc39;
+  color: black;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobs-image-title {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.jobs img {
+  max-width: 5rem;
+  max-height: 5rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  .back-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    padding: 5% 10%;
+  }
+  :root {
+    font-size: 12px;
+  }
+}

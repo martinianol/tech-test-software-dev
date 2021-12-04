@@ -8,6 +8,7 @@ const router = express.Router()
 const controllerIndex = require('../controller/index')
 const controllerSkill = require('../controller/skills')
 const controllerExperience = require('../controller/experiences')
+const controllerJobs = require('../controller/jobs')
 
 /**
  * Routes
@@ -22,5 +23,7 @@ router.get('/search/experiences', controllerIndex.searchExperiences)
 
 router.get('/users/:publicId/strengths/:strengthId', controllerSkill.skill)
 router.get('/users/:publicId/experiences/:experienceId', controllerExperience.experience)
+
+router.post('/search/jobs', controllerJobs.findJobs)
 
 module.exports = router

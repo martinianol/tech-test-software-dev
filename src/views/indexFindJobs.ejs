@@ -5,15 +5,13 @@
     <%- include('./partials/header.ejs')%>
 
     <main>
-      <section class="title">
+      <section class="title" style="background-image: url(https://res.cloudinary.com/torre-technologies-co/image/upload/origin/home/heros/t3k2ntg0rpohaaxgt2tu.png);">
         <h1>Hi!</h1>
-        <h2>Please enter your Torre's user name to display your jobs</h2>
+        <h2>Be like the Golden Retriever and find your dream job!</h2>
       </section>
       <section class="search-form">
-        <form action="/search/jobs" method="get">
-          <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Torre's username..."%>"/>
-          <p class="not-found"><%= locals.notFound ? `We couldn't find a user named ${locals.userToFind}`: '' %></p>
-          <button type="submit">FIND JOBS</button>
+        <form action="/search/jobs" method="post">
+          <button type="submit">FIND DREAM JOB</button>
         </form>
       </section>
     

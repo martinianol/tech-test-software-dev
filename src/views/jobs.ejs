@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
+  <head>
+    <link rel="stylesheet" href="/css/styles-jobs.css" />
+  </head>
+
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      <section class="skill-title">
+        <h1>This is a list of your possible dream Job</h1>
+        <a href="javascript:history.back()">
+          <div class="back-button">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+        </a>
+      </section>
+
+      <%locals.jobs.forEach(job => { %> 
+        <article class="jobs">
+          <div class="jobs-image-title">
+            <img src=<%=job.organizations[0].picture %>>
+            <div class="job-info">
+              <h3><%=job.organizations[0].name%></h3>
+              <h2><%=job.objective%></h2>
+            </div>
+
+          </div>
+          <p><%=job.tagline%></p>
+          <p>Type: <%=job.type%></p>
+          <% if(job.compensation !== null) { %>
+              <%if(job.compensation.data !==null) {%>
+                <p>Compensation: <%=job.compensation.data.minAmount%>-<%=job.compensation.data.maxAmount%> <%=job.compensation.data.currency%> <%=job.compensation.data.periodicity%></p>
+
+              <%}%>
+          
+          <%}%>
+           
+        </article>
+        <%})%>
+    </main>
+  </body>
+</html>
