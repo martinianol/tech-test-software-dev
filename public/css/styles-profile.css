@@ -87,6 +87,13 @@ a {
     text-align: left;
   }
 
+  .links {
+    width: auto;
+    flex-direction: column;
+    font-size: 3rem;
+    margin-left: auto;
+  }
+
   .bio {
     font-size: 1.4rem;
   line-height: 1.8rem;
