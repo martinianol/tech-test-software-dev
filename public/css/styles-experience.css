@@ -1,10 +1,10 @@
 body {
   text-align: left;
-  color: hsla(0,0%,100%,.5)
+  color: hsla(0, 0%, 100%, 0.5);
 }
 a {
   text-decoration: none;
-  color: black
+  color: black;
 }
 main {
   padding: 5%;
@@ -14,45 +14,46 @@ main h1 {
   font-size: 2.4rem;
 }
 
-h1 {
+.skill-title h1 {
   color: #cddc39;
+  margin: 0;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .strength-info {
   border-bottom: solid 1px #fff;
 }
 
-.strength-info p{
+.strength-info p {
   margin-bottom: 20px;
 }
 .experiences {
   margin-top: 20px;
 }
 
-
-
 .experiences p {
   margin: 0.2rem 0;
-  color: hsla(0,0%,100%,.9)
+  color: hsla(0, 0%, 100%, 0.9);
 }
 
 .strength-info p strong {
-  color: hsla(0,0%,100%,.9)
+  color: hsla(0, 0%, 100%, 0.9);
 }
 
 .back-button {
   background-color: #cddc39;
+  color: black;
   width: 35px;
   height: 35px;
   border-radius: 50%;
   font-size: 15px;
-  position: fixed;
-  left: 80%;
-  top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .company-info-container {
@@ -66,13 +67,18 @@ h1 {
   border-radius: 50%;
 }
 
+@media (min-width: 600px) {
+  .back-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 @media (min-width: 1000px) {
+  main {
+    padding: 5% 10%;
+  }
   :root {
     font-size: 12px;
   }
-
-  .back-button {
-    transform: scale(1.5);
-  }
-
 }

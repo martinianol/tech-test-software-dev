@@ -8,11 +8,14 @@
   <body>
     <%- include('./partials/header.ejs')%>
     <main>
-      
-      <h1><%=locals.experience.name%></h1>
-      <div class='back-button'>
-        <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
-      </div>
+      <section class="skill-title">
+        <h1><%=locals.experience.name%></h1>
+        <a href="javascript:history.back()">
+          <div class='back-button'>
+            <i class="fas fa-chevron-left"></i>
+          </div>
+        </a>
+      </section>
 
       <section class="experiences">
         <h2><%=locals.user.person.name.split(" ")[0]%>'s experience in <%=locals.experience.name%></h2>

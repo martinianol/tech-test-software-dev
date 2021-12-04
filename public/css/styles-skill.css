@@ -1,17 +1,23 @@
 body {
   text-align: left;
-  color: hsla(0,0%,100%,.5)
+  color: hsla(0, 0%, 100%, 0.5);
 }
 a {
   text-decoration: none;
-  color: black
+  color: black;
 }
 main {
   padding: 5%;
 }
 
-main h1 {
+.skill-title h1 {
   font-size: 2.4rem;
+  margin-top: 0;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .experiences h3 {
@@ -22,7 +28,7 @@ main h1 {
   border-bottom: solid 1px #fff;
 }
 
-.strength-info p{
+.strength-info p {
   margin-bottom: 20px;
   text-transform: capitalize;
 }
@@ -35,7 +41,7 @@ main h1 {
 }
 
 .strength-info p strong {
-  color: #fff
+  color: #fff;
 }
 
 .back-button {
@@ -44,13 +50,20 @@ main h1 {
   height: 35px;
   border-radius: 50%;
   font-size: 15px;
-  position: fixed;
-  left: 80%;
-  top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+.back-button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .back-button {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -58,8 +71,7 @@ main h1 {
     font-size: 12px;
   }
 
-  .back-button {
-    transform: scale(1.5);
+  main {
+    padding: 5% 10%;
   }
-
 }
