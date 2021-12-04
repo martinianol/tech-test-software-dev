@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-
+const strengthLevel = require('../utils/hardCodedHelpers')
 /**
  * Env vars 
  */
@@ -31,7 +31,11 @@ const controller = {
 
     const strength = strengths.find(strength => strength.id === strengthId);
 
-    res.render('skill.ejs', { user, strength })
+    const proficiency = strengthLevel.find(strengthLevel => strengthLevel.name === strength.proficiency)
+
+    const icon = proficiency.icon
+
+    res.render('skill.ejs', { user, strength, icon })
   },
 
 }
