@@ -31,7 +31,6 @@ const controller = {
 
     res.render('profile.ejs', { user, strengthsLevel })
   }
-
 }
 
 module.exports = controller

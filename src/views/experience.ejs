@@ -18,7 +18,9 @@
         <h2><%=locals.user.person.name.split(" ")[0]%>'s experience in <%=locals.experience.name%></h2>
         <div class="company-info-container">
           <% if(locals.experience.organizations[0].picture) {%>
-          <img src =<%=locals.experience.organizations[0].picture%>>
+            <a href="" target="_blank">
+              <img src =<%=locals.experience.organizations[0].picture%>>
+            </a>  
           <%}%>
           <div class="company-info">
             <p><%=locals.experience.organizations[0].name%>

@@ -1,5 +1,9 @@
 const fetch = require('node-fetch');
 
+/**
+ * Controllers - Mars: I've created this apiController as a backend for a React App I was playing with
+ */
+
 const controller = {
 
   search: async (req, res) => {
