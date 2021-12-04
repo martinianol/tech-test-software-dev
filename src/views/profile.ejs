@@ -15,6 +15,7 @@
           <h3><%=locals.user.person.professionalHeadline%></h3>
           <h4><%=locals.user.person.location.shortName%></h4>
         </div>
+
         <% if (locals.user.person.links.length !== 0) {%>
           <div class="links">
             <% locals.user.person.links.forEach(link => { %>
@@ -41,25 +42,26 @@
       <section class="bio">
         <p><%=locals.user.person.summaryOfBio%></p>
       </section>
-
+     
       <section class="skills-container">
         <h2>Skills & Interests:</h2>
 
-        <%locals.strengthsLevel.forEach(strengthLevel => {%> 
-        <% if (locals.user.strengths.some(strength => strength.proficiency === strengthLevel.name)) {%>
+        <%locals.strengthLevels.forEach(strengthLevel => {%> 
+          <% if (locals.user.strengths.some(strength => strength.proficiency === strengthLevel)) {%>
 
-        <h3><i class="<%= strengthLevel.icon%>"></i> <%=strengthLevel.name%></h3>
+            <h3><i class="<%= locals.iconByStrength[strengthLevel]%>"></i> <%=strengthLevel%></h3>
         
-        <article class="skills">
-          <% locals.user.strengths.forEach(strength => { %> 
-            <%if(strength.proficiency===strengthLevel.name) {%>
-              <a href="/users/<%= locals.user.person.publicId %>/strengths/<%=strength.id%>">
-                <p><%=strength.name%></p>
-              </a>
-            <%}%> 
-          <%})%>
-        </article>
-        <%}%> 
+            <article class="skills">
+              <% locals.user.strengths.forEach(strength => { %> 
+
+                <%if(strength.proficiency===strengthLevel) {%>
+                  <a href="/users/<%= locals.user.person.publicId %>/strengths/<%=strength.id%>">
+                    <p><%=strength.name%></p>
+                  </a>
+                <%}%> 
+              <%})%>
+            </article>
+          <%}%> 
         <%})%>
       </section>
     </main>

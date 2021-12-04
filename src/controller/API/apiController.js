@@ -1,7 +1,11 @@
 const fetch = require('node-fetch');
 
 /**
- * Controllers - Mars: I've created this apiController as a backend for a React App I was playing with
+ * Controllers  
+ * 
+ * NOTE: I've created this apiController as a backend for a React App I was playing with, 
+ * you can check it out at https://tech-test-software-dev-react.herokuapp.com/
+ * It is not finished though :-)
  */
 
 const controller = {

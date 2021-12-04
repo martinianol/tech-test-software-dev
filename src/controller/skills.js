@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const strengthLevel = require('../utils/hardCodedHelpers')
+const { iconByStrength } = require('../utils/helpers')
 
 /**
  * Env vars 
@@ -29,8 +29,7 @@ const controller = {
     const responseStrength = await fetch(`${url}${publicId}/strengths-skills/${strengthId}/detail`);
     const strength = await responseStrength.json();
 
-    const proficiency = strengthLevel.find(strengthLevel => strengthLevel.name === strength.stats.proficiency)
-    const icon = proficiency.icon
+    const icon = iconByStrength[strength.stats.proficiency]
 
     res.render('skill.ejs', { user, strength, icon })
   },

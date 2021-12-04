@@ -33,11 +33,11 @@ h1 {
 
 .experiences p {
   margin: 0.2rem 0;
-  color: #fff
+  color: hsla(0,0%,100%,.9)
 }
 
 .strength-info p strong {
-  color: #fff
+  color: hsla(0,0%,100%,.9)
 }
 
 .back-button {

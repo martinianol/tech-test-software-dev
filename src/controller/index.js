@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const strengthsLevel = require('../utils/hardCodedHelpers')
+const { strengthLevels, iconByStrength } = require('../utils/helpers')
 
 /**
  * Env vars 
@@ -29,7 +29,7 @@ const controller = {
       return res.render('index.ejs', { notFound, userToFind });
     }
 
-    res.render('profile.ejs', { user, strengthsLevel })
+    res.render('profile.ejs', { user, strengthLevels, iconByStrength })
   }
 }
 

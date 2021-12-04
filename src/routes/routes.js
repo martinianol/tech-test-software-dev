@@ -3,12 +3,11 @@ const router = express.Router()
 
 /**
  * Controllers
- * Mars: I have separated the logic in different controllers as requested in last bullet from the feedback email. I do not consider it necessary on this scale, however I understand for a large scale application should be done.
  */
 
-const controllerIndex = require('../controller/controllerIndex')
-const controllerSkill = require('../controller/controllerSkill')
-const controllerExperience = require('../controller/controllerExperience')
+const controllerIndex = require('../controller/index')
+const controllerSkill = require('../controller/skills')
+const controllerExperience = require('../controller/experiences')
 
 /**
  * Routes
