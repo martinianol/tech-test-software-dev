@@ -12,30 +12,30 @@
       <section class="strength-info">
         <p>
           Proficiency:
-          <strong><i class="<%=icon%>"></i> <%= locals.strength.proficiency%></strong>
+          <strong
+            ><i class="<%=icon%>"></i> <%= locals.strength.stats.proficiency%></strong
+          >
         </p>
-        <p>Recomendations: <strong><%= locals.strength.recommendations%></strong></p>
+        <p>Recomendations: <strong><%= locals.strength.stats.recommendations%></strong></p>
         <div class="back-button">
           <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
         </div>
       </section>
 
       <section class="experiences">
-        <h2><%=locals.user.person.name.split(" ")[0]%>'s experiences</h2>
+        <h2><%=locals.user.person.name.split(" ")[0]%>'s related experiences</h2>
 
-        <%locals.user.experiences.forEach(experience => { %> <% if(experience.category ===
-        'jobs') {%>
-        <a href="/users/<%= locals.user.person.publicId %>/experiences/<%=experience.id%>"
-          ><h3><%=experience.name%></h3></a
-        >
+        <%locals.strength.relatedExperiences.forEach(experience => { %> 
+          <%if(experience.category === 'jobs') {%>
+            <a href="/users/<%= locals.user.person.publicId %>/experiences/<%=experience.id%>"><h3><%=experience.name%></h3></a>
 
-        <p><%=experience.organizations[0].name%></p>
-        <p>
-          From <%=`${experience.fromMonth} ${experience.fromYear}`%> <% if(typeof
-          experience.toMonth !=='undefined') {%> <%=`to ${experience.toMonth}
-          ${experience.toYear}`%> <%}%>
-        </p>
-        <%}%> <%})%>
+            <p><%=experience.organizations[0].name%></p>
+            <p>From <%=`${experience.fromMonth} ${experience.fromYear}`%> 
+              <% if(typeof experience.toMonth !=='undefined') {%> <%=`to ${experience.toMonth} ${experience.toYear}`%> 
+              <%}%>
+            </p>
+          <%}%>
+        <%})%>
       </section>
     </main>
   </body>
