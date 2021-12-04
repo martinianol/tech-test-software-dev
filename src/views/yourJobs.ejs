@@ -2,34 +2,24 @@
 <html lang="en">
   <%- include('./partials/head.ejs')%>
   <head>
-    <link rel="stylesheet" href="/css/styles-skill.css" />
+    <link rel="stylesheet" href="/css/styles-index-your-jobs.css" />
   </head>
-
   <body>
     <%- include('./partials/header.ejs')%>
+
     <main>
-      <section class="skill-title">
-        <h1><%=locals.user.person.name.split(" ")[0]%>'s experiences</h1>
-        <a href="javascript:history.back()">
-          <div class="back-button">
-            <i class="fas fa-chevron-left"></i>
-          </div>
-        </a>
+      <section class="title" >
+        <h1>Hi!</h1>
+        <h2>Please enter your Torre's user name to display your jobs</h2>
       </section>
-
-      <section class="experiences">
-        <%locals.user.experiences.forEach(experience => { %> 
-          <%if(experience.category === 'jobs') {%>
-            <a href="/users/<%= locals.user.person.publicId %>/experiences/<%=experience.id%>"><h3><%=experience.name%></h3></a>
-
-            <p><%=experience.organizations[0].name%></p>
-            <p>From <%=`${experience.fromMonth} ${experience.fromYear}`%> 
-              <% if(typeof experience.toMonth !=='undefined') {%> <%=`to ${experience.toMonth} ${experience.toYear}`%> 
-              <%}%>
-            </p>
-          <%}%>
-        <%})%>
+      <section class="search-form">
+        <form action="/search/experiences" method="get">
+          <input type="search" name="keyword" placeholder="<%=locals.notFound ? '' : "Torre's username..."%>"/>
+          <p class="not-found"><%= locals.notFound ? `We couldn't find a user named ${locals.userToFind}`: '' %></p>
+          <button type="submit">SEARCH YOUR JOBS</button>
+        </form>
       </section>
+    
     </main>
   </body>
 </html>

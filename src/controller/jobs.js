@@ -25,7 +25,6 @@ const controller = {
     const responseJson = await response.json()
 
     const jobs = responseJson.results
-    //return res.send(jobs)
 
     res.render('jobs.ejs', { jobs })
   }

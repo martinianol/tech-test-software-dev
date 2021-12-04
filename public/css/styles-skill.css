@@ -12,12 +12,12 @@ main {
 
 .skill-title h1 {
   font-size: 2.4rem;
-  margin-top: 0;
 }
 
 .skill-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .experiences h3 {

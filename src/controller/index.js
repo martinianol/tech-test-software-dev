@@ -19,14 +19,14 @@ const controller = {
   },
 
   yourJobs: async (req, res) => {
-    res.render('indexYourJobs.ejs')
+    res.render('yourJobs.ejs')
   },
 
   findJobs: async (req, res) => {
-    res.render('indexFindJobs.ejs')
+    res.render('findJobs.ejs')
   },
 
-  search: async (req, res) => {
+  searchUser: async (req, res) => {
     let userToFind = req.query.keyword;
 
     const response = await fetch(`${url}${userToFind}`);
@@ -48,10 +48,10 @@ const controller = {
 
     if (user.code == errorCode) {
       let notFound = user
-      return res.render('indexYourJobs.ejs', { notFound, userToFind });
+      return res.render('yourJobs.ejs', { notFound, userToFind });
     }
 
-    res.render('yourJobs.ejs', { user })
+    res.render('listJobs.ejs', { user })
   }
 }
 
