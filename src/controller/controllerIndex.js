@@ -14,10 +14,7 @@ const errorCode = process.env.ERROR_CODE
 const controller = {
 
   home: async (req, res) => {
-    console.log('env ', url)
-    console.log('errorCode', errorCode)
     res.render('index.ejs')
-
   },
 
   search: async (req, res) => {
