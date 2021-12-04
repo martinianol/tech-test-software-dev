@@ -15,7 +15,28 @@
           <h3><%=locals.user.person.professionalHeadline%></h3>
           <h4><%=locals.user.person.location.shortName%></h4>
         </div>
+        <% if (locals.user.person.links.length !== 0) {%>
+          <div class="links">
+            <% locals.user.person.links.forEach(link => { %>
+               <%if (link.name=='linkedin'){%>
+                <a href="<%=link.address%>" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              <%} else if (link.name=='github') {%>
+                <a href="<%=link.address%>" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              <%} else if (link.name=='link') {%>
+                <a href="<%=link.address%>" target="_blank">
+                  <i class="fas fa-link"></i>
+                </a>
+              <%}%>
+            <%})%>
+            
+          </div>
+        <%}%>
       </section>
+
 
       <section class="bio">
         <p><%=locals.user.person.summaryOfBio%></p>
