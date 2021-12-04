@@ -28,47 +28,12 @@ const controller = {
       return res.render('index.ejs', { notFound, userToFind });
     }
 
-    res.render('profile.ejs', { user })
-  },
+    // The following array is here to pass the skill level and its icons to the profile view
+    const strengthsLevel = [{ name: "master", icon: "fas fa-biking" }, { name: "expert", icon: "fas fa-skating" }, { name: "proficient", icon: "fas fa-running" }, { name: "competent", icon: "fas fa-walking" }, { name: "novice", icon: "fas fa-male" }, { name: "no-experience-interested", icon: "fas fa-baby" }]
 
-  skill: async (req, res) => {
-    let publicId = req.params.publicId;
-    let strengthId = req.params.strengthId;
-
-    const response = await fetch(`${url}${publicId}`);
-    const user = await response.json();
-
-    if (user.code == errorCode) {
-      let notFound = user
-      return res.render('index.ejs', { notFound });
-    }
-
-    const strengths = user.strengths;
-
-    const strength = strengths.find(strength => strength.id === strengthId);
-
-    res.render('skill.ejs', { user, strength })
-  },
-
-  experience: async (req, res) => {
-    let publicId = req.params.publicId;
-    let experienceId = req.params.experienceId;
-
-    const response = await fetch(`${url}${publicId}`);
-    const user = await response.json();
-
-    if (user.code == errorCode) {
-      let notFound = user
-      return res.render('index.ejs', { notFound });
-    }
-
-    const experiences = user.experiences;
-
-    const experience = experiences.find(experience => experience.id === experienceId);
-
-
-    res.render('experience.ejs', { user, experience })
+    res.render('profile.ejs', { user, strengthsLevel })
   }
+
 }
 
 module.exports = controller

@@ -25,6 +25,8 @@ const controller = {
       return res.render('index.ejs', { notFound });
     }
 
+
+
     const strengths = user.strengths;
 
     const strength = strengths.find(strength => strength.id === strengthId);

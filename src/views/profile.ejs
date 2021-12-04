@@ -9,7 +9,7 @@
     <%- include('./partials/header.ejs')%>
     <main>
       <section class="info">
-        <img src="<%=locals.user.person.picture%>" alt="user profile picture"/>
+        <img src="<%=locals.user.person.picture%>" alt="user profile picture" />
         <div class="info-title">
           <h2><%= locals.user.person.name%></h2>
           <h3><%=locals.user.person.professionalHeadline%></h3>
@@ -21,19 +21,26 @@
         <p><%=locals.user.person.summaryOfBio%></p>
       </section>
 
-      <section class="skills">
-        <h2>Your skills are</h2>
-        <div class="skills-container">
-          <% locals.user.strengths.forEach(strength => { %>
-            <a href="/users/<%= locals.user.person.publicId %>/strengths/<%=strength.id%>">
-              <p><%=strength.name%></p>
-            </a>
-            <%})%>
-        </div>
+      <section class="skills-container">
+        <h2>Skills & Interests:</h2>
+
+        <%locals.strengthsLevel.forEach(strengthLevel => {%> 
+        <% if (locals.user.strengths.some(strength => strength.proficiency === strengthLevel.name)) {%>
+
+        <h3><i class="<%= strengthLevel.icon%>"></i> <%=strengthLevel.name%></h3>
+        
+        <article class="skills">
+          <% locals.user.strengths.forEach(strength => { %> 
+            <%if(strength.proficiency===strengthLevel.name) {%>
+              <a href="/users/<%= locals.user.person.publicId %>/strengths/<%=strength.id%>">
+                <p><%=strength.name%></p>
+              </a>
+            <%}%> 
+          <%})%>
+        </article>
+        <%}%> 
+        <%})%>
       </section>
     </main>
-   
-    
-    
   </body>
 </html>
